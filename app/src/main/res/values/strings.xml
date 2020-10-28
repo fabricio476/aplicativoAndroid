@@ -3,4 +3,8 @@
     <string name="entrar">Entrar</string>
     <string name="cadastrarUser">Não tem uma conta? Crie aqui!</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="title_activity_menu_usuario">MainActivity</string>
+    <string name="title_home">Vendas</string>
+    <string name="title_dashboard">Historico</string>
+    <string name="title_notifications">Configurações</string>
 </resources>

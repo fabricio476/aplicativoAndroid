@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textaccount = findViewById(R.id.id_textCadastar);
+        btnEnter = findViewById(R.id.id_btnentrar);
 
-
-        //tela de cadastro
+        //ir para tela de cadastro
         textaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, CadastrarUser.class);
                 //ação
                 startActivity(intent);
+            }
+        });
+
+        //ir para tela do usuario
+        btnEnter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intentUser = new Intent(MainActivity.this, MenuUsuario.class);
+
+                startActivity(intentUser);
+
             }
         });
 
