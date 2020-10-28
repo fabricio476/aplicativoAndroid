@@ -1,7 +1,12 @@
 package com.fabricio.login;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -9,6 +14,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MenuUsuario extends AppCompatActivity {
+
+    FloatingActionButton floatingbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,24 @@ public class MenuUsuario extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+
+        floatingbutton = findViewById(R.id.id_floatingByn);
+
+        floatingbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intentCad = new Intent(MenuUsuario.this, CadastrarVendas.class);
+
+                startActivity(intentCad);
+
+            }
+        });
+
+
+
+
     }
 
 }

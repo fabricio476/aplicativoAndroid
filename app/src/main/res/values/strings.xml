@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">AppVendas</string>
     <string name="entrar">Entrar</string>
     <string name="cadastrarUser">Não tem uma conta? Crie aqui!</string>
     <string name="cadastrar">Cadastrar</string>
@@ -7,4 +7,5 @@
     <string name="title_home">Vendas</string>
     <string name="title_dashboard">Historico</string>
     <string name="title_notifications">Configurações</string>
+    <string name="salvar">Salvar</string>
 </resources>
