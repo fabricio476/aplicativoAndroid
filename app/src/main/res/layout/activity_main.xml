@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/id_textemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -19,16 +19,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/id_textsenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/id_textemail"
+        app:layout_constraintStart_toStartOf="@+id/id_textemail"
+        app:layout_constraintTop_toBottomOf="@+id/id_textemail" />
 
     <Button
         android:id="@+id/id_btnentrar"
@@ -36,12 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/entrar"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/id_textsenha"
+        app:layout_constraintStart_toStartOf="@+id/id_textsenha"
+        app:layout_constraintTop_toBottomOf="@+id/id_textsenha" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/id_textCadastar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
