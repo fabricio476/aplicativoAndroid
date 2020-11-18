@@ -5,7 +5,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="title_activity_menu_usuario">MainActivity</string>
     <string name="title_home">Vendas</string>
-    <string name="title_dashboard">Historico</string>
+    <string name="title_dashboard">Relatorio</string>
     <string name="title_notifications">Configurações</string>
     <string name="salvar">Salvar</string>
 </resources>

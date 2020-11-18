@@ -22,4 +22,9 @@
         android:name="com.fabricio.login.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/cadastrarVendas"
+        android:name="com.fabricio.login.CadastrarVendas"
+        android:label="activity_cadastrar_vendas"
+        tools:layout="@layout/activity_cadastrar_vendas" />
 </navigation>

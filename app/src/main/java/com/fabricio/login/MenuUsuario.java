@@ -32,18 +32,7 @@ public class MenuUsuario extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        floatingbutton = findViewById(R.id.id_floatingByn);
 
-        floatingbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intentCad = new Intent(MenuUsuario.this, CadastrarVendas.class);
-
-                startActivity(intentCad);
-
-            }
-        });
 
 
 
