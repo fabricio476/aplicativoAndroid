@@ -53,7 +53,7 @@
     <TextView
         android:id="@+id/id_item_nome"
         style="@style/Widget.AppCompat.TextView"
-        android:layout_width="239dp"
+        android:layout_width="220dp"
         android:layout_height="41dp"
         android:text="TextView"
         android:typeface="monospace"
@@ -66,7 +66,7 @@
 
     <TextView
         android:id="@+id/id_item_produto"
-        android:layout_width="239dp"
+        android:layout_width="220dp"
         android:layout_height="41dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/text_produto"
@@ -78,13 +78,25 @@
 
     <TextView
         android:id="@+id/id_item_codigo"
-        android:layout_width="239dp"
+        android:layout_width="220dp"
         android:layout_height="41dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/text_codigo"
         app:layout_constraintEnd_toEndOf="@+id/id_item_produto"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/text_codigo"
         app:layout_constraintTop_toTopOf="@+id/text_codigo"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_item_produto"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

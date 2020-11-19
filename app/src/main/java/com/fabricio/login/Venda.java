@@ -4,8 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class Venda {
+public class Venda implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int Id;
@@ -15,6 +17,7 @@ public class Venda {
     private String produto;
     @ColumnInfo(name = "codigo")
     private String codigo;
+
 
 
     public int getId() {

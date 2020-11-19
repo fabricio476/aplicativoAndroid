@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import com.fabricio.login.CadastrarVendas;
 import com.fabricio.login.MyAdapter;
+import com.fabricio.login.MyDatabase;
 import com.fabricio.login.R;
 import com.fabricio.login.Venda;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,11 +28,9 @@ public class HomeFragment extends Fragment  {
     private HomeViewModel homeViewModel;
     FloatingActionButton floatingbutton;
     RecyclerView recyclerView;
-
+    private MyDatabase db;
     Venda venda;
-    Venda venda1 = new Venda();
-    Venda venda2  = new Venda();
-    Venda venda3 = new Venda();
+
     List<Venda> vendas = new ArrayList<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,13 +38,11 @@ public class HomeFragment extends Fragment  {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-
+        db = Room.databaseBuilder(getActivity(), MyDatabase.class,"MeuDB").build();
         floatingbutton = root.findViewById(R.id.id_floatingByn);
         recyclerView = root.findViewById(R.id.id_recycler);
 
-        vendas.add(venda1);
-        vendas.add(venda3);
-        vendas.add(venda2);
+
         carregarLista();
 
         floatingbutton.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +51,6 @@ public class HomeFragment extends Fragment  {
 
                 Intent in = new Intent(getActivity(), CadastrarVendas.class);
                 startActivity(in);
-
-               // Intent intentList = new Intent(HomeFragment.this,CadastrarVendas.class);
-               // startActivity(intentList);
 
             }
         });
@@ -69,18 +64,17 @@ public class HomeFragment extends Fragment  {
     }
 
 
-
     public void carregarLista(){
 
-        String nome="1111",produto="2222",codigo="3333";
-        int id =0;
-        for (int i=0;i<=10;i++){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
 
-            venda = new Venda();
+                vendas.addAll(db.vendasDao().getAll());
 
-            vendas.add(venda);
+            }
+        }).start();
 
-        }
     }
 
 

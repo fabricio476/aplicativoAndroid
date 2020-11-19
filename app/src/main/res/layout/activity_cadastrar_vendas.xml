@@ -25,7 +25,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Produto"
-        android:inputType="date"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/id_Cadnomecliente"
         app:layout_constraintStart_toStartOf="@+id/id_Cadnomecliente"
         app:layout_constraintTop_toBottomOf="@+id/id_Cadnomecliente" />
@@ -37,7 +37,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="ID da venda"
-        android:inputType="number"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/id_CadDataVenda"
         app:layout_constraintStart_toStartOf="@+id/id_CadDataVenda"
         app:layout_constraintTop_toBottomOf="@+id/id_CadDataVenda" />
