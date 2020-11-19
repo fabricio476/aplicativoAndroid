@@ -16,17 +16,20 @@ public class MyAdapter extends RecyclerView.Adapter{
     private Context context;
 
 
-    public MyAdapter(List<Venda> vendas ,Context context){
 
+    public MyAdapter(List<Venda> vendas,Context context ){
         this.vendas = vendas;
-        this.context = context;
+       this.context = context;
     }
 
 
-    @NonNull
+
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_venda, parent, false);
+
+
+
 
         MyViewHolder holder = new MyViewHolder(view);
 

@@ -1,14 +1,19 @@
 package com.fabricio.login;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Venda {
 
-
+    @PrimaryKey(autoGenerate = true)
     private int Id;
-
+    @ColumnInfo(name = "cliente")
     private  String cliente;
-
+    @ColumnInfo(name = "produto")
     private String produto;
-
+    @ColumnInfo(name = "codigo")
     private String codigo;
 
 
